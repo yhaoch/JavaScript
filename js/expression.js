@@ -30,6 +30,8 @@ function g(){
 
 //?:
 x > 0 ? x:-x
-
+//typeof return a type string
 var value = "Yanghaochuan";
 console.log((typeof(value) == "string" ? "Yes " + value:"No " + value));
+ 
+ 
