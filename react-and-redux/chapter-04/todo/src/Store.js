@@ -8,6 +8,7 @@ import Perf from 'react-addons-perf'
 const win = window;
 win.Perf = Perf
 
+//把多个模块的reducer相连接，使用的函数是combineReducers
 const reducer = combineReducers({
   todos: todoReducer,
   filter: filterReducer
