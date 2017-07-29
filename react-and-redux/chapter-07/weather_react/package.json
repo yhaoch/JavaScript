@@ -2,7 +2,7 @@
   "name": "weather_react",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://www.weather.com.cn/",
+  "proxy": "http://deckerchan.com:5000/api/authorization/",
   "devDependencies": {
     "react-scripts": "0.8.4"
   },

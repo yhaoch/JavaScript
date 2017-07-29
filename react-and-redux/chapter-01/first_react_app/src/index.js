@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ClickCounter from './ClickCounter';
+import FetchDemo from './fetch_test';
 import './index.css';
 
 ReactDOM.render(
-  <ClickCounter/>,
+  <FetchDemo/>,
   document.getElementById('root')
 );
