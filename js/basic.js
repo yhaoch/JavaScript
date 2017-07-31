@@ -99,12 +99,14 @@ var d = new Date(2017,5,16)
 /*javascripts does not have block scope but function scope*/
 var scope = "global"
 function f() {
-	console.log(scope)
+	//console.log(scope)
 	var scope = "local"
-	console.log(scope)
+	//console.log(scope)
 }
 //run function
 f()
+
+
 
 
 
