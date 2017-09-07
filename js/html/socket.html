@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+    <meta id= "1" version = "0.1" name="yanghaochuan">
+    <head>
+        <title>socket</title>
+    </head>
+    <body>
+        <input id="input" style="width:100%">
+    </body>
+    <script type="text/javascript">
+        window.onload = function(){
+            let nick = prompt("Enter your nickname");
+            let input = document.getElementById("input");
+            input.focus();
+            console.log(location);
+            console.info(location.host + "wfeqdf");
+            let socket = new WebSocket("ws://localhost:5000/");
+            //console.info(location.host);
+
+            socket.onmessage = function(event){
+                let msg = event.data;
+                let node = document.csreateTextNode(msg);
+                let div = document.createElement("div");
+                div.appendChild(node);
+                document.body.insertBefore(div,input);
+                input.scrollIntoView();
+            };
+
+            input.onchange = function(){
+                let msg = nick + ": " + input.value;
+                socket.send(msg);
+                input.value = "";
+            };
+        }
+    </script>
+</html>

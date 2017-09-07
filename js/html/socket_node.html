@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+    </body>
+    <script>
+        let http = require('http');
+        let ws = require('websocket-server');
+
+        let clientui = require('fs').readFileSync("wschatClient.html");
+
+        let httpserver = new http.Server();
+
+        httpserver.on("request",function(request,response){
+            if(require.url === "/"){
+                response.writeHead(200,{"Content-Type":"text/html"});
+                response.write(clientui);
+                response.end();
+            }
+            else{
+                response.writeHead(404);
+                response.end();
+            }
+        });
+
+        let wsserver = ws.createServer({server: httpserver});
+
+        wsserver.on("connection",function(socket){
+            socket.send("Welcome to the chat room");
+            socket.on("message",function(msg){
+                wsserver.broadcast(msg);
+            });
+        });
+
+        wsserver.listen(8000);
+    </script>
+</html>
