@@ -27,7 +27,7 @@ class Counter extends Component {
     console.log('enter getDefaultProps');
   }
   */
-
+  //只要父组件调用了render函数，作为子类，就会自动调用下面的函数,并不能保证nextProps和this.props是相同的或者不相同的
   componentWillReceiveProps(nextProps) {
     console.log('enter componentWillReceiveProps ' + this.props.caption)
   }
@@ -38,6 +38,7 @@ class Counter extends Component {
 
   componentDidMount() {
     console.log('enter componentDidMount ' + this.props.caption);
+    //在这里可以做一些jquery的操作 不过这只是装载上去了
   }
 
   onClickIncrementButton() {
@@ -47,14 +48,15 @@ class Counter extends Component {
   onClickDecrementButton() {
     this.setState({count: this.state.count - 1});
   }
-
+  //重要 有返回值 boolean
   shouldComponentUpdate(nextProps, nextState) {
     return (nextProps.caption !== this.props.caption) ||
            (nextState.count !== this.state.count);
   }
-
+  //重要 有返回值 用来构造DOM
   render() {
     console.log('enter render ' + this.props.caption);
+    //ES6 解构赋值 props是一个object caption是其中的一个属性 就应该这么用。
     const {caption} = this.props;
     return (
       <div>

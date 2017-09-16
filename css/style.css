@@ -1,0 +1,22 @@
+h1,h2,h3,h4,h5,h6{
+    color: green;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+td,ul,ol,li,dl,dt,dd{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+li strong {
+    font-style: italic;
+    font-weight: normal;
+}
+

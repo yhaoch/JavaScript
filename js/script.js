@@ -269,17 +269,32 @@
 // console.log(VO.a); // 10
 //console.log(VO === global); // true
 
-var x = 10, y = 10;
+// var x = 10, y = 10;
 
-with ({x: 20,y:20}) {
+// with ({x: 20,y:20}) {
 
- var x = 30, y = 30;
+//  var x = 30, y = 30;
 
- console.log(x); // 30
- console.log(y); // 30
-}
+//  console.log(x); // 30
+//  console.log(y); // 30
+// }
 
-console.log(x); // 10
-console.log(y); // 30
+// console.log(x); // 10
+// console.log(y); // 30
 
 //encloser
+
+
+//RegExp and String 
+// exec & test | match replace ..
+
+console.log(/^[1-9][0-9]*$|^[1-9][0-9]*\.[0-9]$|^0\.[0-9]$/.test(1.2));
+
+console.log(/^[0-9]+(.[0-9]{2})?$/.test(1.221));
+
+console.log(/^1[34578]\d{9}$/.exec("13611778887"));
+
+let str = "13611778887";
+console.log(str.match(/^1[34578]\d{9}$/));
+
+//javascript web develop
