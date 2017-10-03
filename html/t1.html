@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>t1</title>
+        <meta name="yang" content="this is a test html file..">
+        <!-- <script type="text/javascript">
+            function displayTime(){
+                let elt = document.getElementById("first");
+                let now = new Date();
+                elt.innerHTML = now.toLocaleTimeString();
+                setTimeout(displayTime,1000);
+            }
+            window.onload = displayTime;
+        </script> -->
+        <style type="text/css">
+            /* 这是方法1 */
+            /* #container {
+                position: relative;
+                background-color: #456;
+                height: 400px;
+            }
+            #center {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                display: block;
+                height: 50px;
+                width: 50px;
+                background-color: green;
+                text-align: center;
+            } */
+
+            /* 方法2：Flex */
+            /* #container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 600px;
+                background-color: #188
+            } */
+
+            /* 方法3:  */
+            /* #container {
+                position: relative;
+                background-color: #188;
+                height: 600px;
+            }
+
+            #center {
+                height: 50px;
+                width: 50px;
+                background-color: sandybrown;
+                
+                position:absolute;
+                margin:auto;
+                top:0;
+                bottom:0;
+                left:0;
+                right:0;
+            } */
+
+            /*方法4: padding Less写法*/
+            /* @wrapWidth : 400px;
+
+            .wrap{
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 20px;
+                width: @wrapWidth;
+                height: @wrapWidth;
+                background-color: #ccc;
+            }
+
+            .content{
+                @contentWidth : 100px;
+                width: @contentWidth;
+                height: @contentWidth;
+                padding: (@wrapWidth - @contentWidth) / 2;
+                background-color: #333;
+                background-clip:content-box;
+            } */
+
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div id="center">
+            </div>
+        </div>
+    </body>
+</html>

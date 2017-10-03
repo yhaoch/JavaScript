@@ -288,13 +288,22 @@
 //RegExp and String 
 // exec & test | match replace ..
 
-console.log(/^[1-9][0-9]*$|^[1-9][0-9]*\.[0-9]$|^0\.[0-9]$/.test(1.2));
+// console.log(/^[1-9][0-9]*$|^[1-9][0-9]*\.[0-9]$|^0\.[0-9]$/.test(1.2));
 
-console.log(/^[0-9]+(.[0-9]{2})?$/.test(1.221));
+// console.log(/^[0-9]+(.[0-9]{2})?$/.test(1.221));
 
-console.log(/^1[34578]\d{9}$/.exec("13611778887"));
+// console.log(/^1[34578]\d{9}$/.exec("13611778887"));
 
-let str = "13611778887";
-console.log(str.match(/^1[34578]\d{9}$/));
+// let str = "13611778887";
+// console.log(str.match(/^1[34578]\d{9}$/));
+
+// for(var i=0;i<2;i++){
+//     setTimeout(()=>{
+//         console.log(i);
+//     },0);
+// }
+
+
 
 //javascript web develop
+
