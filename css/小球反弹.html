@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>小球反弹</title>
+    <style>
+        #box {
+            width: 300px;
+            height: 150px;
+            border: 1px solid #7aa4c0;
+        }
+        #ball-box {
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            animation: bouncey linear 3s infinite;
+            -webkit-animation: bouncey linear 3s infinite;
+        }
+        #ball {
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            background: -webkit-radial-gradient(circle, #ddecee, #0377db);
+            background: -o-radial-gradient(circle, #ddecee, #0377db);
+            background: -moz-radial-gradient(circle, #ddecee, #0377db);
+            background: radial-gradient(circle, #ddecee, #0377db);
+            animation: bouncex linear 5s infinite;
+            -webkit-animation: bouncex linear 3s infinite;
+        }
+        @keyframes bouncey
+        {
+            0%,100% {
+                transform:translateY(0px);
+                -webkit-transform:translateY(0px);
+                }
+            50% {
+                transform:translateY(30px);
+                -webkit-transform:translateY(130px);
+                }
+        }
+        @keyframes bouncex
+        {
+            0%,100% {
+                transform:translateX(0px);
+                -webkit-transform:translateX(0px);
+                }
+            50% {
+                transform:translateX(280px);
+                -webkit-transform:translateX(280px);
+                }
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <p id="ball-box">
+            <p id="ball"></p>
+        </p>
+    </div>
+</body>
+</html>
