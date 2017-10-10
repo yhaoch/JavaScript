@@ -1,0 +1,43 @@
+<!-- select and textarea -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表单2</title>
+    <style>
+        /* 可以通过resize设置尾none来使得textarea变得不可以被拉伸 */
+        textarea {
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <span>下拉菜单</span>
+        <select>
+            <optgroup label="beijing">
+                <option>列表1</option>
+                <option>列表2</option>
+                <option>列表3</option>
+            </optgroup>
+            <!-- 可以通过optgroup标签来给下拉列表中的数据进行分类， 用来分组-->
+            <optgroup label="guangzhou">
+                <option>列表1</option>
+                <option>列表2</option>
+                <option>列表3</option>
+            </optgroup>
+            <!-- 通过selected属性来确定默认值 -->
+            <option selected="selected">列表4</option>
+        </select>
+        <br />
+        <!-- textarea定义多行的输入框 -->
+        <!-- 默认情况下，输入框可以无限换行，且输入的框的高度和宽度也是可以自己设定的cols和rows，不过虽然制定了行数，但是还是可以向下无线输入 -->
+        <!-- 默认情况下，输入框可以受冻拉伸     -->
+        <textarea name="pd" cols="30" rows="10"></textarea>
+        <br/>
+        <input type="submit">
+    </form>
+</body>
+</html>

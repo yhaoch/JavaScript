@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>属性选择器</title>
+    <style>
+        img[alt ^= ab] {
+            color: red;
+        }
+        img[alt $= v] {
+            color: pink;
+        }
+        img[alt ~= 1] {
+            color: orange;
+        }
+        p[id] {
+            font-size: 20px;
+            color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <p id="yhc">我是段落</p>
+    <img src="" alt="ab">
+    <img src="" alt="ab-b">
+    <img src="" alt="abc">
+    <img src="" alt="abd">
+    <img src="" alt="ev">
+    <img src="" alt="f1x">
+    <img src="" alt="g1w">
+    <img src="" alt="h1s">
+    <img src="" alt="i">
+    <img src="" alt="gv">
+    <img src="" alt="k">
+</body>
+</html>
