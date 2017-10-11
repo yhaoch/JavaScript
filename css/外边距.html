@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Margin</title>
+    <style>
+        .box1 {
+            height: 100px;
+            width: 100px;
+            display: inline-block;
+            border: 10px solid black;
+            background-color: skyblue;
+            margin: 10px 10px 10px 10px;
+        }
+        .box2 {
+            height: 100px;
+            width: 100px;
+            display: inline-block;
+            border: 10px solid black;
+            background-color: skyblue;
+            margin: 10px 10px 10px 40px;
+        }
+        .box3 {
+            height: 100px;
+            width: 100px;
+            display: inline-block;
+            border: 10px solid black;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <!-- 注意此时三个便签之间的距离并不是margin，是字符实体 空格 的填充。应为我们在写span时，使用了回车，被html解析成了&nbsp -->
+    <!--
+    <span class="box1">配套笔记: </span>
+    <span class="box2">配套笔记: </span>
+    <span class="box3">配套笔记: </span>
+    -->
+    <!-- 这样写span，就不会出现间隔 -->
+    <span class="box1">配套笔记: </span><span class="box2">配套笔记: </span><span class="box3">配套笔记: </span>
+</body>
+</html>
