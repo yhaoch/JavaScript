@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>padding</title>
+        <style>
+            .wrap {
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 20px;
+                width: 400px;
+                height: 400px;
+                background-color: #ccc;
+            }
+            
+            .content {
+                width: 100px;
+                height: 100px;
+                padding: 150px;/* 这里是什么呢，应该是父元素的高 － content的高，这个差值的一半作为padding，可以使content box居中 */
+                background-color: #333;
+                background-clip:content-box;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="content"></div>
+        </div>
+    </body>
+</html>
