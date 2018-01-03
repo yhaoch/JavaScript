@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>1</title>
+        <style type="text/css">
+            .d1 {
+                margin: 10px;
+                height: 100px;
+                width: 100px;
+                background-color: red;
+                /**border-width: 10px;**/
+                border-color: green;
+                border: 5px;
+            }
+
+            .p1 {
+                margin-top:20;
+                text-align: left;
+                font-size: 20;
+                color: green;
+                overflow: hidden;
+                display: inline-block;
+            }
+
+            p {
+                color: yellow;
+            }
+            
+        </style>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+            // $(document).ready(function(){
+            //     $("#container").click(function(){    
+            //         $(this).css("background-color","yellow").slideUp("slow");
+            //     });
+
+            //     $(".d1").dblclick(function(){
+            //         $(this).css("color","black").css("text-align","right").find("p").html("changed");
+            //     });
+
+            //     function handleClick(){
+            //         alert("click image");
+            //     }
+
+            //     var img1 = $("<img/>",{
+            //         src: "assets/poster.jpg",
+            //         css: { borderWidth: 10},
+            //         css: { borderColor: "#116"},
+            //         click: handleClick
+            //     });
+
+            //     img1.insertBefore("#container1");
+            // });
+
+            $(function(){
+                $("#container").click(function(){    
+                    $(this).css("background-color","yellow").slideUp("slow");
+                });
+
+                $(".d1").dblclick(function(){
+                    $(this).css("color","black").css("text-align","right").find("p").html("changed");
+                });
+
+                function handleClick(){
+                    alert("click image");
+                }
+
+                var img1 = $("<img/>",{
+                    src: "assets/poster.jpg",
+                    css: { borderWidth: 10},
+                    css: { borderColor: "#116"},
+                    click: handleClick
+                });
+
+                img1.insertBefore("#container1");
+
+                $("#container1>span").dblclick(function(){
+                    $(this).css("color","yellow");
+                    setTimeout(function(){
+                        $("#container1>span").remove();
+                        console.log("here");
+                    },1000);
+                });
+
+                //console.log($("p").length);
+                //console.log($("div #container").attr("color"));
+                $("div").addClass(function(n){
+                    return "div" + n;
+                });
+
+                $("h3").text(function(n,current){
+                    return "*" + (n+1) + current;
+                });
+
+                //console.log($(".d1").html());
+
+                //$("div").before("<hr/>");
+                $("<hr/>").insertBefore("div");
+            });
+
+            function SendAjax(msg,callback){
+                var xmlHttp = XMLHttpRequest();
+                xmlHttp.onreadystatechange = callback;
+
+                function callback(){
+                    if(xmlHttp.onreadystatechange == 4 && xmlHttp.status == 200){
+                        document.getElementById("info").innerHTML = xmlHttp.responseText;
+                    }
+                }
+
+                xmlHttp.open("post",url,true);
+
+                xmlHttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+
+                xmlHttp.send(msg);
+            }
+
+        
+
+            
+        </script>
+    </head>
+    <body>
+        <h3>f</h3>
+        <h3>s</h3>
+        <h3>t</h3>
+        <div id="container" class="d1">
+            <p class="p1">pppp</p>
+        </div>
+
+        <div id="container1" class="d1">
+            <p class="p1">pppp</p>
+            <span class="s1">YHC</span>
+        </div>
+    </body>
+
+</html>
+ 
