@@ -1,0 +1,15 @@
+{
+  "name": "webpack-demo",
+  "version": "1.0.0",
+  "description": "demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack --config webpack.config.js --progress --display-modules --display-reasons --colors"
+  },
+  "author": "yhc",
+  "license": "ISC",
+  "dependencies": {
+    "path": "^0.12.7"
+  }
+}
